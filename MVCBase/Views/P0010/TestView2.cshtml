@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TestView2</title>
+</head>
+<body>
+    <div> 
+        TestView2.cshtml is here.<br />
+        @{
+            MVCBase.Models.P0010 oP0010 = (MVCBase.Models.P0010)ViewBag.P0010;
+            int i2 = (int)ViewBag.i1;
+
+
+            // ViewBag其實就是ViewData. ViewBag.Name = ViewData["Name"]
+            MVCBase.Models.P0010 o2 = (MVCBase.Models.P0010)ViewData["P0010"];
+            int i3 = (int)ViewData["i1"];
+        }
+        ViewBag.P0010: <br />
+        ms1 = @oP0010.ms1 <br />
+        ms2 = @oP0010.ms2 <br />
+        mi1 = @oP0010.mi1 <br />
+        mi2 = @oP0010.mi2.ToString("C") <br />
+        sum = @(oP0010.mi1+oP0010.mi2) <br />
+        i2 = @i2 <br /><br />
+
+        ViewBag其實就是ViewData. ViewBag.Name = ViewData["Name"] <br />
+        ViewData["P0010"]: <br />
+        ms1 = @o2.ms1 <br />
+        ms2 = @o2.ms2 <br />
+        mi1 = @o2.mi1 <br />
+        mi2 = @o2.mi2.ToString("C") <br />
+        sum = @(o2.mi1+oP0010.mi2) <br />
+        i3 = @i3 <br /><br />
+    </div>
+</body>
+</html>

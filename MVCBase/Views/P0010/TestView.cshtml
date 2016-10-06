@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TestView</title>
+</head>
+<body>
+    <div>
+        Hi, I am TestView.cshtml.<br />
+        @{
+            MVCBase.Models.P0010 oP0010 = (MVCBase.Models.P0010)ViewData["P0010"];
+            int i2 = (int)ViewData["i1"];
+        }
+        Model P0010: <br />
+        ms1 = @oP0010.ms1 <br />
+        ms2 = @oP0010.ms2 <br />
+        mi1 = @oP0010.mi1 <br />
+        mi2 = @oP0010.mi2.ToString("C") <br />
+        sum = @(oP0010.mi1+oP0010.mi2) <br />
+        i2 = @i2 <br /><br />
+    </div>
+</body>
+</html>
